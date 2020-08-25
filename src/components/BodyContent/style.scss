@@ -90,7 +90,6 @@ $white2: #F2F5FA;
     .work_for {
         align-items: center;
         background: $white2;
-        background-size: cover;
         display: flex;
         flex-direction: column;
         padding: 4em 5.5em;
@@ -266,12 +265,11 @@ $white2: #F2F5FA;
     }
 
     .work_for {
-        align-items: center;
         background: $white2;
-        background-size: cover;
         display: flex;
         flex-direction: column;
         padding: 4.3em 5.5em;
+        text-align: center;
 
         .convert_txt {
             color: $blue;
