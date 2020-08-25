@@ -1,6 +1,6 @@
 import React, { SFC } from 'react';
 import peopleLogo from '../../assets/images/Ic_ilustra_Hero@3x.png';
-import Burger from '../Burger';
+import Burger from './Burger';
 import './style.scss';
 
 export interface HeaderProps {

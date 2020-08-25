@@ -1,9 +1,9 @@
 import React, { SFC, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import woloxLogo from '../../assets/images/logo_full_color.svg';
+import woloxLogo from '../../../assets/images/logo_full_color.svg';
 import MobileNav from '../MobileNav';
-import { HOME } from '../../routes';
+import { HOME } from '../../../routes';
 import './style.scss';
 
 interface StyledBurgerProps {
