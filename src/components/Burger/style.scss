@@ -1,0 +1,19 @@
+@media screen and (max-width: 768px) {
+    .menu_content {
+        position: fixed;
+        background: white;
+        width: 100%;
+    }
+
+    .wolox_logo {
+        margin: 1em 5em 0 1em;
+        width: 12em;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .menu_content {
+        display: flex;
+        width: 100%;
+    }
+}
