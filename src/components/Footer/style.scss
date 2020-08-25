@@ -1,0 +1,113 @@
+$black: #000000;
+$blue: #2CA7DF;
+$green: #98CF00;
+$grey: #a9a9a99e;
+$white: #ffffff;
+
+@media screen and (max-width: 768px) {
+    .container_footer {
+        align-items: center;
+        background-image: url(../../assets/backgrounds/Bg_Footer@3x.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+    }
+
+    .footer_text {
+        padding: 2em 0;
+        text-align: center;
+        .footer_thks {
+            font-family: 'Montserrat Bold', sans-serif;
+            font-size: 1.2em;
+        }
+        .footer_blue_txt {
+            color: $blue;
+        }
+    }
+
+    .wolox_webpage {
+        background: $blue;
+        border: 3px solid;
+        border-color: $blue;
+        border-radius: 12rem;
+        box-sizing: border-box;
+        box-shadow: 1px 4px 15px 2px $grey;
+        color: $white;
+        cursor: pointer;
+        font-family: 'Montserrat Bold', sans-serif;
+        font-size: 1.1em;
+        outline: none;
+        padding: .6rem 0;
+        text-align: center;
+        text-decoration: none;
+        width: 12em;
+        &:active {
+            background: $white;
+            border-color: $blue;
+            color: $blue;
+            position: relative;
+            top: 1px;
+        }
+    }
+
+    .wolox_footer {
+        padding: 2em 0 1em 0;
+        width: 5em;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .container_footer {
+        align-items: center;
+        background-image: url(../../assets/backgrounds/Bg_Footer@3x.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        font-size: 2em;
+    }
+
+    .footer_text {
+        padding: 2em 0;
+        text-align: center;
+        .footer_thks {
+            font-family: 'Montserrat Bold', sans-serif;
+            font-size: 1.2em;
+        }
+        .footer_blue_txt {
+            color: $blue;
+        }
+    }
+
+    .wolox_webpage {
+        background: $blue;
+        border: 3px solid;
+        border-color: $blue;
+        border-radius: 12rem;
+        box-sizing: border-box;
+        box-shadow: 1px 4px 15px 2px $grey;
+        color: $white;
+        cursor: pointer;
+        font-family: 'Montserrat Bold', sans-serif;
+        font-size: 0.7em;
+        outline: none;
+        padding: .6rem 0;
+        text-align: center;
+        text-decoration: none;
+        width: 12em;
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+        &:hover {
+            background: $white;
+            border-color: $blue;
+            color: $blue;
+        }
+    }
+
+    .wolox_footer {
+        padding: 5em 0 1em 0;
+        width: 3em;
+    }
+}
