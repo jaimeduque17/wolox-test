@@ -3,7 +3,26 @@
     src: url(./assets/fonts/Montserrat/Montserrat-Medium.ttf) format('opentype');
 }
 
+@font-face {
+    font-family: 'Montserrat Regular';
+    src: url(./assets/fonts/Montserrat/Montserrat-Regular.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(./assets/fonts/Montserrat/Montserrat-Bold.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Montserrat ExtraBold';
+    src: url(./assets/fonts/Montserrat/Montserrat-ExtraBold.ttf) format('opentype');
+}
+
 body {
     font-family: 'Montserrat Medium', sans-serif;
+    margin: 0;
+}
+
+p {
     margin: 0;
 }
