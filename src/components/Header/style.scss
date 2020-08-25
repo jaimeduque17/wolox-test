@@ -3,19 +3,65 @@ $blue: #2CA7DF;
 $green: #98CF00;
 $white: #ffffff;
 
-@font-face {
-    font-family: 'Montserrat Regular';
-    src: url(../../assets/fonts/Montserrat/Montserrat-Regular.ttf) format('opentype');
+@media screen and (max-width: 768px) {
+    nav {
+        background-image: url(../../assets/backgrounds/Bg_Header@3x.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .menu_options {
+        align-items: baseline;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .home {
+        color: $black;
+        font-size: 1.3em;
+        text-decoration: none;
+    }
+
+    .content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 5em 0 2em 0;
+    }
+
+    .content_text {
+        font-family: 'Montserrat Regular', sans-serif;
+        font-size: 1.5em;
+        margin-bottom: 1em; 
+        text-align: center;
+        .txt_bold {
+            font-family: 'Montserrat SemiBold', sans-serif; 
+        }
+        .txt_green {
+            font-family: 'Montserrat Bold', sans-serif;
+            color: $green;
+        }
+    }
+
+    .people_logo {
+        transform: rotateY(180deg);
+        width: 15em;
+        z-index: -1;
+    }
 }
 
-@font-face {
-    font-family: 'Montserrat SemiBold';
-    src: url(../../assets/fonts/Montserrat/Montserrat-SemiBold.ttf) format('opentype');
-}
-
-@font-face {
-    font-family: 'Montserrat Bold';
-    src: url(../../assets/fonts/Montserrat/Montserrat-Bold.ttf) format('opentype');
+@media screen and (min-width: 769px) {
+nav {
+    background-image: url(../../assets/backgrounds/Bg_Header@3x.png);
+    background-size: cover;
+    border-bottom: 2px solid #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 20px;
 }
 
 .container {
@@ -30,7 +76,7 @@ $white: #ffffff;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 1.5em 0 0 0;
+    padding: 2.5em 0 0 2.5em;
 }
 
 .wolox_logo {
@@ -42,31 +88,6 @@ $white: #ffffff;
     color: $black;
     font-size: 1.3em;
     text-decoration: none;
-}
-
-.login_button {
-    background: $white;
-    border: 1px solid;
-    border-color: $blue;
-    border-radius: 12rem;
-    box-sizing: border-box;
-    color: $blue;
-    cursor: pointer;
-    font-family: 'Montserrat SemiBold', sans-serif;
-    font-size: .9em;
-    outline: none;
-    padding: .6rem 0;
-    text-align: center;
-    text-decoration: none;
-    width: 12em;
-    &:active {
-        position: relative;
-        top: 1px;
-    }
-    &:hover {
-        background: $blue;
-        color: $white;
-    }
 }
 
 .content {
@@ -93,4 +114,5 @@ $white: #ffffff;
     margin: 2em 5em 0 1em;
     transform: rotateY(180deg);
     width: 26em;
+}
 }
