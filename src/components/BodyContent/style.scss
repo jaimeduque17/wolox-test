@@ -1,0 +1,361 @@
+$blue: #2CA7DF;
+$green: #98CF00;
+$white: #FFFFFF;
+$white2: #F2F5FA;
+
+@media screen and (max-width: 768px) {
+    .body_content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .techs_container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #technologies {
+        font-size: 1em;
+    }
+
+    .tech_logo {
+        padding: 2em 0;
+        width: 12em;
+    }
+
+    .woloxers {
+        display: flex;
+        flex-direction: column;
+        font-size: 1em;
+    }
+
+    .programmer {
+        align-items: center;
+        background-image: url(../../assets/images/img_woloxer.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    .txt_twitter {
+        color: $green;
+        font-family: 'Montserrat ExtraBold', sans-serif;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+
+        .txt_blue {
+            color: $blue;
+        }
+    }
+
+    .container_twitter {
+        align-items: center;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;;
+    }
+
+    .twitter_logo {
+        margin-right: 1em;
+        width: 2em;
+    }
+
+    .follow_button {
+        background: transparent;
+        border: 3px solid;
+        border-color: $blue;
+        border-radius: 12rem;
+        box-sizing: border-box;
+        color: $white;
+        cursor: pointer;
+        font-family: 'Montserrat SemiBold', sans-serif;
+        font-size: .9em;
+        outline: none;
+        padding: .6rem 0;
+        text-align: center;
+        text-decoration: none;
+        width: 12em;
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+    }
+
+    .work_for {
+        align-items: center;
+        background: $white2;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding: 4em 5.5em;
+
+        .convert_txt {
+            color: $blue;
+            font-family: 'Montserrat Bold', sans-serif;
+        }
+
+        .ideas_txt {
+            color: $green;
+            font-family: 'Montserrat Bold', sans-serif;
+        }
+    }
+
+    .benefits_container {
+        padding: 2em 0 0 0;
+        text-align: center;
+
+        .benefits_title {
+            font-size: 1.2em;
+        }
+
+        .wink {
+            color: $blue;
+        }
+
+        .benefits_images {
+            column-gap: 2em;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 1em;
+        }
+
+        .benefit {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Montserrat Regular', sans-serif;
+            justify-content: center;
+            padding: 1em 0.5em;
+
+            .benefits_logo {
+                margin: 0 0 0.5em 0;
+                width: 3em;
+            }
+        }
+    }
+
+    .line {
+        background: #88888866;
+        box-shadow: 1px 0px 18px 2px #888888b0;
+        height: 1px;
+        margin: 2.5em;
+    }
+
+    .requirements_container {
+        column-gap: 2em;
+        display: grid;
+
+        .requirement_margin {
+            padding: 0 0 2em 0;
+        }
+
+        .req_txt {
+            font-family: 'Montserrat Bold', sans-serif;
+            font-size: 1.5em;
+            margin: 0 0 1em 0;
+        }
+
+        .requirement {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            font-family: 'Montserrat Regular', sans-serif;
+            font-size: 1em;
+            padding: 0 0 1em 0;
+            text-align: initial;
+
+            .bullet {
+                margin: 0 0.5em;
+                width: 1em;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .body_content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .techs_container {
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #technologies {
+        font-size: 2em;
+    }
+
+    .tech_logo {
+        padding: 2em 0;
+        width: 30em;
+    }
+
+    .woloxers {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        font-size: 2em;
+        justify-content: center;
+    }
+
+    .programmer {
+        align-items: center;
+        background-image: url(../../assets/images/img_woloxer.png);
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding: 2em;
+    }
+
+    .txt_twitter {
+        color: $green;
+        font-family: 'Montserrat ExtraBold', sans-serif;
+        font-size: 2em;
+        margin-bottom: 0.5em;
+
+        .txt_blue {
+            color: $blue;
+        }
+    }
+
+    .container_twitter {
+        align-items: center;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1em;;
+    }
+
+    .twitter_logo {
+        margin-right: 1em;
+        width: 2em;
+    }
+
+    .follow_button {
+        background: transparent;
+        border: 3px solid;
+        border-color: $blue;
+        border-radius: 12rem;
+        box-sizing: border-box;
+        color: $white;
+        cursor: pointer;
+        font-family: 'Montserrat SemiBold', sans-serif;
+        font-size: .9em;
+        outline: none;
+        padding: .6rem 0;
+        text-align: center;
+        text-decoration: none;
+        width: 12em;
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+        &:hover {
+            background: $blue;
+            color: $white;
+        }
+    }
+
+    .work_for {
+        align-items: center;
+        background: $white2;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        padding: 4.3em 5.5em;
+
+        .convert_txt {
+            color: $blue;
+            font-family: 'Montserrat Bold', sans-serif;
+        }
+
+        .ideas_txt {
+            color: $green;
+            font-family: 'Montserrat Bold', sans-serif;
+        }
+    }
+
+    .benefits_container {
+        padding: 5em 0 2em 0;
+        text-align: center;
+
+        .wink {
+            color: $blue;
+        }
+
+        .benefits_title {
+            font-size: 2em;
+        }
+
+        .benefits_images {
+            column-gap: 0;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            margin-top: 1em;
+        }
+
+        .benefit {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            font-family: 'Montserrat Regular', sans-serif;
+            font-size: 1.4em;
+            justify-content: center;
+            padding: 1em 1.5em;
+
+            .benefits_logo {
+                margin: 0 0 0.5em 0;
+                width: 3em;
+            }
+        }
+    }
+
+    .line {
+        background: #88888866;
+        box-shadow: 1px 0px 18px 2px #888888b0;
+        height: 1px;
+        margin: 5em 4em 0 4em;
+    }
+
+    .requirements_container {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 7em 0 0 0;
+
+        .requirement_margin {
+            padding: 0 0 0 0;
+        }
+
+        .req_txt {
+            font-family: 'Montserrat Bold', sans-serif;
+            font-size: 2em;
+            margin: 0 0 1em 0;
+        }
+
+        .requirement {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            font-family: 'Montserrat Regular', sans-serif;
+            font-size: 1.2em;
+            padding: 0 0 2em 0;
+            text-align: initial;
+
+            .bullet {
+                margin: 0 0.5em;
+                width: 1em;
+            }
+        }
+    }
+}
