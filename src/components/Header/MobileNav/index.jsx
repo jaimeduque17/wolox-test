@@ -36,17 +36,22 @@ const Ul = styled.ul`
 `;
 
 const MobileNav = ({ open }) => {
+
+  const token = localStorage.getItem('token');
+
   return (
     <Ul open={open}>
       <li><a href="/#init" className="home">Inicio</a></li>
       <li><a href="/#technologies" className="home">Tecnologías</a></li>
       <li><a href="/#benefits" className="home">Beneficios</a></li>
       <li><a href="/#requirements" className="home">Requerimientos</a></li>
-      <li>{window.screen.width <= 768
-        ? <Link to={LOGIN} className="home">Login</Link>
-        : <Link to={LOGIN} className="login_button">
-          Login
+      {!token
+        ? <li>{window.screen.width <= 768
+          ? <Link to={LOGIN} className="home">Login</Link>
+          : <Link to={LOGIN} className="login_button">
+            Login
           </Link>}</li>
+        : null}
     </Ul>
   );
 }
