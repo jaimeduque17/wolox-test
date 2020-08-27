@@ -22,10 +22,24 @@ const AuthState = (props) => {
     const [state, dispatch] = useReducer(AuthReducer, initialState);
 
     // Return the authenticated user
-    const userAuthenticated = () => {
+    const userAuthenticated = async (data) => {
         const token = localStorage.getItem('token');
         if (token) {
             tokenAuth(token);
+        }
+
+        try {
+            const response = await clientAxios.post('/login', data);
+            dispatch({
+                type: LOGIN_SUCCESSFUL,
+                payload: response.data
+            });
+
+        } catch (error) {
+            console.log(error.response);
+            dispatch({
+                type: LOGIN_ERROR
+            })
         }
     }
 
