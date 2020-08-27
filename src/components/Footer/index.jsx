@@ -1,12 +1,8 @@
-import React, { SFC } from 'react';
+import React from 'react';
 import woloxLogo from '../../assets/images/Ic_Wolox_Footer.svg';
 import './style.scss';
 
-export interface FooterProps {
-
-}
-
-const Footer: SFC<FooterProps> = () => {
+const Footer = () => {
     return (
         <div className="container_footer">
             <p className="footer_text">

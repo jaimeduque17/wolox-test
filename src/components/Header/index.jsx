@@ -1,13 +1,9 @@
-import React, { SFC } from 'react';
+import React from 'react';
 import peopleLogo from '../../assets/images/Ic_ilustra_Hero@3x.png';
 import Burger from './Burger';
 import './style.scss';
 
-export interface HeaderProps {
-
-}
-
-const Header: SFC<HeaderProps> = () => {
+const Header = () => {
     return (
         window.screen.width <= 768 ? (<nav>
             <Burger />

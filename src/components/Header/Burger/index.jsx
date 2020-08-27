@@ -1,4 +1,4 @@
-import React, { SFC, useState } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import woloxLogo from '../../../assets/images/logo_full_color.svg';
@@ -6,11 +6,7 @@ import MobileNav from '../MobileNav';
 import { HOME } from '../../../routes';
 import './style.scss';
 
-interface StyledBurgerProps {
-  open: boolean;
-}
-
-const StyledBurger = styled.div<StyledBurgerProps>`
+const StyledBurger = styled.div`
   width: 2rem;
   height: 2rem;
   position: fixed;
@@ -28,31 +24,27 @@ const StyledBurger = styled.div<StyledBurgerProps>`
   div {
     width: 2rem;
     height: 0.25rem;
-    background-color: ${props => props.open ? '#ccc' : '#333'};
+    background-color: ${({ open }) => open ? '#ccc' : '#333'};
     border-radius: 10px;
     transform-origin: 1px;
     transition: all 0.3s linear;
 
     &:nth-child(1) {
-      transform: ${props => props.open ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => open ? 'rotate(45deg)' : 'rotate(0)'};
     }
 
     &:nth-child(2) {
-      transform: ${props => props.open ? 'translateX(100%)' : 'translateX(0)'};
-      opacity: ${props => props.open ? 0 : 1};
+      transform: ${({ open }) => open ? 'translateX(100%)' : 'translateX(0)'};
+      opacity: ${({ open }) => open ? 0 : 1};
     }
 
     &:nth-child(3) {
-      transform: ${props => props.open ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ open }) => open ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
 `;
 
-export interface BurgerProps {
-
-}
-
-const Burger: SFC<BurgerProps> = () => {
+const Burger = () => {
 
     const [open, setOpen] = useState(false);
 

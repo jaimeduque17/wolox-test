@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React from 'react';
 import techLogo from '../../assets/images/Ic_Tecnologys.svg';
 import twitterLogo from '../../assets/images/twitter.svg';
 import clockLogo from '../../assets/images/Ic_Hour.svg';
@@ -12,11 +12,7 @@ import bulletBlack from '../../assets/images/Ic_Bullet_2.svg';
 import bulletBlue from '../../assets/images/Ic_Bullet_3.svg';
 import './style.scss';
 
-export interface BodyContentProps {
-
-}
-
-const BodyContent: SFC<BodyContentProps> = () => {
+const BodyContent= () => {
     return (
         <div className="body_content">
             <div className="techs_container">

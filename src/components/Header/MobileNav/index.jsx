@@ -1,13 +1,9 @@
-import React, { SFC } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import './style.scss';
 
-interface UlProps {
-  open: boolean;
-}
-
-const Ul = styled.ul<UlProps>`
+const Ul = styled.ul`
 @media screen and (min-width: 769px) {
   display: flex;
   flex-flow: row nowrap;
@@ -23,7 +19,7 @@ const Ul = styled.ul<UlProps>`
   flex-flow: column nowrap;
   background-color: #2CA7DF;
   position: fixed;
-  transform: ${props => props.open ? 'translateX(0)' : 'translateX(100%)'};
+  transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(100%)'};
   top: -16px;
   height: 100%;
   width: 100%;
@@ -38,11 +34,7 @@ const Ul = styled.ul<UlProps>`
 }
 `;
 
-export interface MobileNavProps {
-  open: any
-}
-
-const MobileNav: SFC<MobileNavProps> = ({ open = false }) => {
+const MobileNav = ({ open }) => {
   return (
     <Ul open={open}>
       <li><a href="/#init" className="home">Inicio</a></li>
