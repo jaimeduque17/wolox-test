@@ -1,0 +1,34 @@
+$white: #ffffff;
+
+.tech_content {
+    border-radius: 10px 10px 10px 10px;
+    background: $white;
+    display: flex;
+    padding: 30px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    margin: 1em;
+}
+
+.container_tech_img {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 40%;
+}
+
+.img_tech {
+    width: 5em;
+}
+
+.tech_properties {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.bold_txt {
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: 18px;
+}
