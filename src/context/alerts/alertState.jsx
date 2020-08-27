@@ -20,12 +20,12 @@ const AlertState = props => {
             }
         });
 
-        // After 5 seconds clean error message
+        // After 3 seconds clean error message
         setTimeout(() => {
             dispatch({
                 type: HIDE_ALERT
             })
-        }, 5000);
+        }, 3000);
     }
 
     return (
