@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { LOGIN } from '../../../routes';
 import './style.scss';
 
 const Ul = styled.ul`
@@ -42,8 +43,8 @@ const MobileNav = ({ open }) => {
       <li><a href="/#benefits" className="home">Beneficios</a></li>
       <li><a href="/#requirements" className="home">Requerimientos</a></li>
       <li>{window.screen.width <= 768
-        ? <Link to="/login" className="home">Login</Link>
-        : <Link to="/login" className="login_button">
+        ? <Link to={LOGIN} className="home">Login</Link>
+        : <Link to={LOGIN} className="login_button">
           Login
           </Link>}</li>
     </Ul>
