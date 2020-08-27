@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import woloxLogo from '../../assets/images/logo_full_color.svg';
+import tokenAuth from '../../config/token';
 import AlertContext from '../../context/alerts/alertContext';
 import AuthContext from '../../context/authentication/authContext';
 import { HOME } from '../../routes';
@@ -21,6 +22,8 @@ const Login = ({ history }) => {
         password: ''
     });
 
+    const [checked, setChecked] = useState(false);
+
     // extract the user
     const { email, password } = user;
 
@@ -28,11 +31,15 @@ const Login = ({ history }) => {
     useEffect(() => {
         if (auth && email === 'user@wolox.com.ar' && password === '12345678') {
             history.push('/techs');
+            const token = checked === true ? localStorage.getItem('token') : localStorage.removeItem('token');
+            if (token) {
+                tokenAuth(token);
+            }
         }
         if (message) {
             showAlert(message.msg, message.category);
         }
-    }, [message, auth, history]);
+    }, [message, auth, email, password, history]);
 
     const onChange = (e) => {
         saveUser({
@@ -77,7 +84,7 @@ const Login = ({ history }) => {
                     </form>
                     <div id="formFooter">
                         <label className="underlineHover">
-                            <input type="checkbox" name="remember" /> Mantenerse conectado
+                            <input type="checkbox" name="remember" checked={checked} onChange={() => setChecked(!checked)} /> Mantenerse conectado
                     </label>
                     </div>
                 </div>
