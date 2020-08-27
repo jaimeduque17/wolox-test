@@ -13,7 +13,7 @@ const Login = ({ history }) => {
     const { alert, showAlert } = alertContext;
 
     const authContext = useContext(AuthContext);
-    const { message, logIn } = authContext;
+    const { message, auth, logIn } = authContext;
 
     // state for login
     const [user, saveUser] = useState({
@@ -26,10 +26,13 @@ const Login = ({ history }) => {
 
     // If the password or user does not exist
     useEffect(() => {
+        if (auth && email === 'user@wolox.com.ar' && password === '12345678') {
+            history.push('/techs');
+        }
         if (message) {
             showAlert(message.msg, message.category);
         }
-    }, [message, history]);
+    }, [message, auth, history]);
 
     const onChange = (e) => {
         saveUser({
@@ -54,10 +57,6 @@ const Login = ({ history }) => {
 
         if (email !== 'user@wolox.com.ar' && password !== '12345678') {
             showAlert('Try again', 'alert');
-        }
-
-        if (email === 'user@wolox.com.ar' && password === '12345678') {
-            history.push('/techs');
         }
 
         // pass to the action
