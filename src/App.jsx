@@ -7,6 +7,7 @@ import TechState from './context/technologies/techState';
 import tokenAuth from './config/token';
 import PrivateRoute from './components/PrivateRoute';
 import LoginRoute from './components/LoginRoute';
+import Language from './components/Language';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import TechList from './pages/TechList';
@@ -24,6 +25,7 @@ const App = () => {
       <TechState>
         <AlertState>
           <AuthState>
+              <Language />
             <Switch>
               <Route exact path={HOME} component={Home} />
               <LoginRoute exact path={LOGIN} component={Login} />
