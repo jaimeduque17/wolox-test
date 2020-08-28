@@ -2,17 +2,19 @@
     .change_language {
         display: flex;
         justify-content: flex-start;
+        margin: 13px 16px 0 0;
     }
     .pointer {
         cursor: pointer;
-        padding: 0 10px;
+        padding: 0 6px;
     }
 }
 
 @media screen and (min-width: 769px) {
     .change_language {
         display: flex;
-        justify-content: flex-end;
+        justify-content: flex-start;
+        margin: 1.7em 0 0 0;
     }
     .pointer {
         cursor: pointer;
