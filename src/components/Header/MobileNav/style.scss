@@ -3,27 +3,37 @@ $blue: #2CA7DF;
 $green: #98CF00;
 $white: #ffffff;
 
-.login_button {
-    background: $white;
-    border: 1px solid;
-    border-color: $blue;
-    border-radius: 12rem;
-    box-sizing: border-box;
-    color: $blue;
-    cursor: pointer;
-    font-family: 'Montserrat Bold', sans-serif;
-    font-size: .9em;
-    outline: none;
-    padding: .6rem 4rem;
-    text-align: center;
-    text-decoration: none;
-    width: 12em;
-    &:active {
-        position: relative;
-        top: 1px;
+@media screen and (max-width: 768px) {
+    .login_button {
+        color: $black;
+        font-size: 1.3em;
+        text-decoration: none;
     }
-    &:hover {
-        background: $blue;
-        color: $white;
+}
+
+@media screen and (min-width: 769px) {
+    .login_button {
+        background: $white;
+        border: 1px solid;
+        border-color: $blue;
+        border-radius: 12rem;
+        box-sizing: border-box;
+        color: $blue;
+        cursor: pointer;
+        font-family: 'Montserrat Bold', sans-serif;
+        font-size: .9em;
+        outline: none;
+        padding: .6rem 4rem;
+        text-align: center;
+        text-decoration: none;
+        width: 12em;
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+        &:hover {
+            background: $blue;
+            color: $white;
+        }
     }
 }

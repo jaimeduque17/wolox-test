@@ -46,11 +46,10 @@ const MobileNav = ({ open }) => {
       <li><a href="/#benefits" className="home">Beneficios</a></li>
       <li><a href="/#requirements" className="home">Requerimientos</a></li>
       {!token
-        ? <li>{window.screen.width <= 768
-          ? <Link to={LOGIN} className="home">Login</Link>
-          : <Link to={LOGIN} className="login_button">
+        ? <li>
+          <Link to={LOGIN} className="login_button">
             Login
-          </Link>}</li>
+          </Link></li>
         : null}
     </Ul>
   );
