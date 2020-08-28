@@ -1,4 +1,5 @@
 $blue: #2CA7DF;
+$black: #000000;
 $gray1: #cccccc;
 $white: #ffffff;
 
@@ -20,7 +21,7 @@ $white: #ffffff;
 }
 
 .searchTerm:focus{
-  color: $blue;
+  color: $black;
 }
 
 .searchImg {
