@@ -66,5 +66,8 @@
         "license": "License:",
         "language": "Language:",
         "type": "Type:"
+    },
+    "Search": {
+        "placeholder": "Search by Technology or Type"
     }
 }
