@@ -1,4 +1,4 @@
-import { GET_TECHS, ACTUAL_TECH, ERROR_TECH } from '../../types';
+import { GET_TECHS, ERROR_TECH } from '../../types';
 
 export default (state, action) => {
     switch (action.type) {
