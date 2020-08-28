@@ -48,7 +48,7 @@
         }
     },
     "Login": {
-        "title": "Iniciar sesión",
+        "title": "Ingresar",
         "email": "Correo electrónico",
         "password": "Contraseña",
         "submit": "Iniciar Sesión",

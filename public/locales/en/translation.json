@@ -48,10 +48,10 @@
         }
     },
     "Login": {
-        "title": "Log in",
+        "title": "Login",
         "email": "Email",
         "password": "Password",
-        "submit": "Log In",
+        "submit": "LogIn",
         "connected": "Stay connected",
         "error": {
             "email": "The email is wrong",
