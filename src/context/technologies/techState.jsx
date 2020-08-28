@@ -7,8 +7,7 @@ import ClientAxios from '../../config/axios';
 const TechState = (props) => {
     const initialState = {
         techs: [],
-        tech: null,
-        message: null
+        tech: null
     }
 
     // Dispatch to execute the actions
@@ -39,7 +38,6 @@ const TechState = (props) => {
             value={{
                 techs: state.techs,
                 tech: state.tech,
-                message: state.message,
                 getTechs
             }}
         >

@@ -9,8 +9,7 @@ export default (state, action) => {
             }
         case ERROR_TECH:
             return {
-                ...state,
-                message: action.payload
+                ...state
             }
         default:
             return state;

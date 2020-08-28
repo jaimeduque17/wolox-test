@@ -14,7 +14,7 @@ const Login = ({ history }) => {
     const { alert, showAlert } = alertContext;
 
     const authContext = useContext(AuthContext);
-    const { message, auth, logIn } = authContext;
+    const { auth, logIn } = authContext;
 
     // state for login
     const [user, saveUser] = useState({
@@ -36,10 +36,7 @@ const Login = ({ history }) => {
                 tokenAuth(token);
             }
         }
-        if (message) {
-            showAlert(message.msg, message.category);
-        }
-    }, [message, auth, email, password, history]);
+    }, [ auth, email, password, history]);
 
     const onChange = (e) => {
         saveUser({
