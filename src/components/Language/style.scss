@@ -1,0 +1,21 @@
+@media screen and (max-width: 768px) {
+    .change_language {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .pointer {
+        cursor: pointer;
+        padding: 0 10px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .change_language {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .pointer {
+        cursor: pointer;
+        padding: 10px 15px;
+    }
+}
