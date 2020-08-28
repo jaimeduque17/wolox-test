@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import woloxLogo from '../../../assets/images/logo_full_color.svg';
 import MobileNav from '../MobileNav';
+import Language from '../../Language';
 import { HOME } from '../../../routes';
 import './style.scss';
 
@@ -50,6 +51,7 @@ const Burger = () => {
 
     return (
         <div className="menu_content">
+           <Language />
             <Link to={HOME}><img alt="wolox logo" className="wolox_logo" src={woloxLogo} /></Link>
             <StyledBurger open={open} onClick={() => setOpen(!open)}>
                 <div />

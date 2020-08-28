@@ -5,6 +5,7 @@ import woloxLogo from '../../assets/images/logo_full_color.svg';
 import tokenAuth from '../../config/token';
 import AlertContext from '../../context/alerts/alertContext';
 import AuthContext from '../../context/authentication/authContext';
+import Languages from '../../components/Language';
 import { HOME } from '../../routes';
 import './style.scss';
 
@@ -73,6 +74,7 @@ const Login = ({ history }) => {
 
     return (
         <>
+            <Languages />
             <Link className="login_to_home" to={HOME}><img alt="wolox logo" className="to_home_logo" src={woloxLogo} /></Link>
             <div className="wrapper fadeInDown">
                 <div id="formContent">
