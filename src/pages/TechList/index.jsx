@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import woloxLogo from '../../assets/images/logo_full_color.svg';
 import AuthContext from '../../context/authentication/authContext';
 import TechContext from '../../context/technologies/techContext';
@@ -8,6 +9,9 @@ import { HOME } from '../../routes';
 import './style.scss';
 
 const TechList = () => {
+
+     // translations
+     const { t } = useTranslation();
 
     // Extract values of the context
     const techContext = useContext(TechContext);
@@ -29,7 +33,7 @@ const TechList = () => {
                 <button
                     className="logout_btn"
                     onClick={() => logOut()}
-                >Logout
+                >{t('Common.logout')}
                 </button>
             </div>
             <div className="list_container">

@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import woloxLogo from '../../assets/images/logo_full_color.svg';
 import tokenAuth from '../../config/token';
 import AlertContext from '../../context/alerts/alertContext';
@@ -8,6 +9,9 @@ import { HOME } from '../../routes';
 import './style.scss';
 
 const Login = ({ history }) => {
+
+    // translations
+    const { t } = useTranslation();
 
     // Extract values of the context
     const alertContext = useContext(AlertContext);
@@ -36,7 +40,7 @@ const Login = ({ history }) => {
                 tokenAuth(token);
             }
         }
-    }, [ auth, email, password, history]);
+    }, [auth, email, password, history]);
 
     const onChange = (e) => {
         saveUser({
@@ -52,15 +56,15 @@ const Login = ({ history }) => {
         // validate that there are no empty fields
 
         if (email !== 'user@wolox.com.ar') {
-            showAlert('The email is wrong', 'alert');
+            showAlert(`${t('Login.error.email')}`, 'alert');
         }
 
         if (password !== '12345678') {
-            showAlert('The password is wrong', 'alert');
+            showAlert(`${t('Login.error.password')}`, 'alert');
         }
 
         if (email !== 'user@wolox.com.ar' && password !== '12345678') {
-            showAlert('Try again', 'alert');
+            showAlert(`${t('Login.error.both')}`, 'alert');
         }
 
         // pass to the action
@@ -72,17 +76,17 @@ const Login = ({ history }) => {
             <Link className="login_to_home" to={HOME}><img alt="wolox logo" className="to_home_logo" src={woloxLogo} /></Link>
             <div className="wrapper fadeInDown">
                 <div id="formContent">
-                    <h2 className="active"> Inicia sesión </h2>
+                    <h2 className="active"> {t('Login.title')} </h2>
                     {alert ? (<div className={alert.category}>{alert.msg}</div>) : null}
                     <form onSubmit={onSubmit}>
-                        <input type="text" id="email" className="fadeIn first" name="email" placeholder="Escribe el email" value={email} onChange={onChange} />
-                        <input type="password" id="password" className="fadeIn second" name="password" placeholder="Escribe el password" value={password} onChange={onChange} />
-                        <input type="submit" className="fadeIn third" value="Log In" />
+                        <input type="text" id="email" className="fadeIn first" name="email" placeholder={t('Login.email')} value={email} onChange={onChange} />
+                        <input type="password" id="password" className="fadeIn second" name="password" placeholder={t('Login.password')} value={password} onChange={onChange} />
+                        <input type="submit" className="fadeIn third" value={t('Login.submit')} />
                     </form>
                     <div id="formFooter">
                         <label className="underlineHover">
-                            <input type="checkbox" name="remember" checked={checked} onChange={() => setChecked(!checked)} /> Mantenerse conectado
-                    </label>
+                            <input type="checkbox" name="remember" checked={checked} onChange={() => setChecked(!checked)} /> {t('Login.connected')}
+                        </label>
                     </div>
                 </div>
             </div>

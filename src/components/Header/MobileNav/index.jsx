@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 import { LOGIN } from '../../../routes';
 import './style.scss';
 
@@ -37,18 +38,21 @@ const Ul = styled.ul`
 
 const MobileNav = ({ open }) => {
 
+  // translations
+  const { t } = useTranslation();
+
   const token = localStorage.getItem('token');
 
   return (
     <Ul open={open}>
-      <li><a href="/#init" className="home">Inicio</a></li>
-      <li><a href="/#technologies" className="home">Tecnologías</a></li>
-      <li><a href="/#benefits" className="home">Beneficios</a></li>
-      <li><a href="/#requirements" className="home">Requerimientos</a></li>
+      <li><a href="/#init" className="home">{t('Home.header.init')}</a></li>
+      <li><a href="/#technologies" className="home">{t('Home.header.technologies')}</a></li>
+      <li><a href="/#benefits" className="home">{t('Home.header.benefits')}</a></li>
+      <li><a href="/#requirements" className="home">{t('Home.header.requirements')}</a></li>
       {!token
         ? <li>
           <Link to={LOGIN} className="login_button">
-            Login
+            {t('Login.title')}
           </Link></li>
         : null}
     </Ul>
