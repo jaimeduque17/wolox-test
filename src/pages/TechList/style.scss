@@ -1,0 +1,109 @@
+$black: #000000;
+$blue: #2CA7DF;
+$white: #ffffff;
+
+.list_to_home {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 2em 0;
+}
+
+.img_wlx_list {
+    margin: 2em 0 0 0;
+    width: 12em;
+}
+
+.tech_list_content {
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    .header_techlist {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em;
+    }
+
+    .list_container {
+        background-image: url(../../assets/backgrounds/Bg_Header@3x.png);
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        flex-direction: column; 
+        justify-content: center;
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+    }
+
+    .logout_btn {
+        background: $white;
+        border: 1px solid;
+        border-color: $blue;
+        border-radius: 5rem;
+        box-sizing: border-box;
+        color: $blue;
+        cursor: pointer;
+        font-family: 'Montserrat Bold', sans-serif;
+        padding: 10px 6px;
+        text-align: center;
+        text-decoration: none;
+        width: 7em;
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+
+    .header_techlist {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 2em;
+    }
+
+    .list_container {
+        background-image: url(../../assets/backgrounds/Bg_Header@3x.png);
+        background-size: cover;
+        align-items: center;
+        flex-direction: column; 
+        justify-content: center;
+        width: 100%;
+        min-height: 100%;
+        position: absolute;
+        column-gap: 2em;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .logout_btn {
+        background: $white;
+        border: 1px solid;
+        border-color: $blue;
+        border-radius: 12rem;
+        box-sizing: border-box;
+        color: $blue;
+        cursor: pointer;
+        font-family: 'Montserrat Bold', sans-serif;
+        font-size: .9em;
+        outline: none;
+        padding: .6rem 4rem;
+        text-align: center;
+        text-decoration: none;
+        width: 12em;
+        &:active {
+            position: relative;
+            top: 1px;
+        }
+        &:hover {
+            background: $blue;
+            color: $white;
+        }
+    }
+}
