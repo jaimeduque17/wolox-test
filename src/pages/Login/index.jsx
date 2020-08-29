@@ -41,7 +41,7 @@ const Login = ({ history }) => {
                 tokenAuth(token);
             }
         }
-    }, [auth, email, password, history]);
+    }, [auth, checked, email, password, history]);
 
     const onChange = (e) => {
         saveUser({

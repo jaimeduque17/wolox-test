@@ -10,10 +10,10 @@ const Language = () => {
 
     return (
         <div className="change_language">
-            <h1><span className="pointer" onClick={() => handleClick('en')} >
+            <h1><span className="pointer" role="img" aria-label="US flag" onClick={() => handleClick('en')} >
                 🇺🇸
           </span></h1>
-            <h1><span className="pointer" onClick={() => handleClick('es')} >
+            <h1><span className="pointer" role="img" aria-label="CO flag" onClick={() => handleClick('es')} >
                 🇨🇴
           </span></h1>
         </div>
