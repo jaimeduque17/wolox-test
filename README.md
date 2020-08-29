@@ -41,6 +41,10 @@ or
 $ yarn build
 ```
 
+## Live Demo
+I have deployed the demo application into Netlify server. 
+* Live Demo URL: [https://wolox-test.netlify.app/](https://wolox-test.netlify.app/)
+
 
 ## Author
 * **Jaime Duque** - (https://github.com/jaimeduque17)
