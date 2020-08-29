@@ -66,7 +66,7 @@ const TechList = () => {
                 <Technology
                     technologies={word.length < 1 ? techs : filterDisplay}
                 />
-                {filterDisplay.length == 1
+                {filterDisplay.length === 1
                     ? <h1>{` ${t('Search.there_is')} ${filterDisplay.length} ${t('Search.element')}`}</h1>
                     : filterDisplay.length > 1
                         ? <h1>{` ${t('Search.there_are')} ${filterDisplay.length} ${t('Search.elements')}`}</h1>
