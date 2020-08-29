@@ -68,6 +68,10 @@
         "type": "Type:"
     },
     "Search": {
-        "placeholder": "Search by Technology or Type"
+        "placeholder": "Search by Technology or Type",
+        "there_is": "There is",
+        "there_are": "There are",
+        "element": "element",
+        "elements": "elements"
     }
 }

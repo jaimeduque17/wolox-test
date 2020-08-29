@@ -68,6 +68,10 @@
         "type": "Tipo:"
     },
     "Search": {
-        "placeholder": "Busca por Tecnología ó Tipo"
+        "placeholder": "Busca por Tecnología ó Tipo",
+        "there_is": "Hay",
+        "there_are": "Hay",
+        "element": "elemento",
+        "elements": "elementos"
     }
 }
