@@ -42,5 +42,5 @@ $ yarn build
 ```
 
 
-## Authors
+## Author
 * **Jaime Duque** - (https://github.com/jaimeduque17)
