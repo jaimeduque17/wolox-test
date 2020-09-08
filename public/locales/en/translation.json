@@ -65,7 +65,10 @@
         "author": "Author:",
         "license": "License:",
         "language": "Language:",
-        "type": "Type:"
+        "type": "Type:",
+        "asc": "Ascendant",
+        "desc": "Descendant",
+        "restart": "Restart"
     },
     "Search": {
         "placeholder": "Search by Technology or Type",

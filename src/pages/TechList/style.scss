@@ -13,6 +13,37 @@ $white: #ffffff;
     width: 12em;
 }
 
+.order_container {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 3rem 0;
+}
+
+.order_button {
+    background: $white;
+    border: 1px solid;
+    border-color: $blue;
+    border-radius: 12rem;
+    box-sizing: border-box;
+    color: $blue;
+    cursor: pointer;
+    font-family: 'Montserrat Bold', sans-serif;
+    font-size: .9em;
+    outline: none;
+    padding: .6rem;
+    text-align: center;
+    text-decoration: none;
+    width: 10em;
+    &:active {
+        position: relative;
+        top: 1px;
+    }
+    &:hover {
+        background: $blue;
+        color: $white;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .header_techlist {

@@ -24,6 +24,8 @@ const TechList = () => {
 
     const [word, setWord] = useState('');
 
+    const [orderTech, setOrderTech] = useState(undefined);
+
     const [filterDisplay, setFilterDisplay] = useState([]);
 
     // Get techs when charge the component
@@ -50,6 +52,17 @@ const TechList = () => {
         }
     }
 
+    const orderTechs = () => {
+        if (orderTech === 'asc') {
+            return [...techs].sort((a, b) => a.tech > b.tech ? 1 : -1);
+        }
+        else if (orderTech === 'desc') {
+            return [...techs].sort((a, b) => b.tech > a.tech ? 1 : -1);
+        } else {
+            return [...techs];
+        }
+    }
+
     return (
         <>
             <div className="header_techlist">
@@ -62,9 +75,14 @@ const TechList = () => {
                 </button>
             </div>
             <SearchBar value={word} handleChange={e => handleChange(e.target.value)} />
+            <div className="order_container">
+                <button className="order_button" onClick={() => setOrderTech('asc')}>{t('List.asc')}</button>
+                <button className="order_button" onClick={() => setOrderTech('desc')}>{t('List.desc')}</button>
+                <button className="order_button" onClick={() => setOrderTech()}>{t('List.restart')}</button>
+            </div>
             <div className="list_container">
                 <Technology
-                    technologies={word.length < 1 ? techs : filterDisplay}
+                    technologies={word.length < 1 ? orderTechs() : filterDisplay}
                 />
                 {filterDisplay.length === 1
                     ? <h1>{` ${t('Search.there_is')} ${filterDisplay.length} ${t('Search.element')}`}</h1>
